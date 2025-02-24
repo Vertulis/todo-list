@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styles from './Modules/TodoItem.module.css';
 
 const TodoItem = ({todo, updateTodo, deleteTodo}) =>{
     const [isEditing, setIsEditing] = useState(false);
@@ -10,18 +11,21 @@ const TodoItem = ({todo, updateTodo, deleteTodo}) =>{
     };
 
     return(
-        <li>
+        <li className={styles.item}>
           {isEditing ? (
-        <>
-          <input value={newText} onChange={(e) => setNewText(e.target.value)} />
-          <button onClick={handleEdit}>Save</button>
-        </>
+        <div className={styles.editItem}>
+          <input className={styles.editTextInput} value={newText} onChange={(e) => setNewText(e.target.value)} />
+          <i className={`fa-regular fa-floppy-disk ${styles.saveIcon}`} onClick={handleEdit}></i>
+          </div>
       ) : (
-        <>
+        <div className={styles.itemUnedited}>
           <span>{todo.text}</span>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
-          <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-        </>
+          <div className={styles.modifyContainer}>
+            <i className="fa-solid fa-pencil" onClick={() => setIsEditing(true)} style={{color:"hsl(199, 100.00%, 50.00%)"}}></i>
+            <i className="fa-solid fa-trash" onClick={() => deleteTodo(todo.id)} style={{color:"red"}}></i>
+          </div>
+         
+        </div>
       )}
     </li>
     );

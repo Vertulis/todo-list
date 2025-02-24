@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
+.appContainer{
+  padding: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.41);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .heading{
   font-family: 'DynaPuff', cursive;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.4em;
+  color: white;
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
+

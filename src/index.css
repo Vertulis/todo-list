@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
-html{
+* {
     box-sizing: border-box;
-}
+  }
 
 body{
     display: flex;
     justify-content: center;
-    background: linear-gradient(hsl(0,0,70%),hsl(300, 100%, 50%)) !important;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5%;
+    background-image: radial-gradient(hsl(0, 0%, 90%), hsl(318, 100%, 67%));
+    background-repeat: no-repeat;
+    height: 100vh;
 }
